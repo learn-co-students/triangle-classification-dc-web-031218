@@ -3,7 +3,7 @@ require "pry"
 class Triangle
  attr_reader :kind,:args
 
- def initialize(*args)
+ def initialize(args)
    @args = args
 
    if invalid?
