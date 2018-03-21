@@ -16,14 +16,13 @@ class Triangle
       @kind = :isosceles
     elsif args.uniq.length == 3
       @kind = :scalene
-    else
     end
 
   end
 end
 
 def invalid?
-  args.include?(0) || args[0] + args[1] <= args[2] || args[1] + args[2] <= args[0] || args[0] + args[2] <= args[1]
+  args.include?(0) || args.sort[0] + args.sort[1] <= args.sort[2]
 end
 
 
