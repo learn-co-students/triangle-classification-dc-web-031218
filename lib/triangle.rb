@@ -4,7 +4,7 @@ class Triangle
  attr_reader :kind,:args
 
  def initialize(*args)
-   @args = args
+   @args = args.sort
 
    if invalid?
      begin
@@ -22,7 +22,7 @@ class Triangle
 end
 
 def invalid?
-  args.include?(0) || args.sort[0] + args.sort[1] <= args.sort[2]
+  args.include?(0) || args[0] + args[1] <= args[2]
 end
 
 
